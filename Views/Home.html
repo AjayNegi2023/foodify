@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foofigy</title>
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>Fodify</h1>
+        <nav>
+            <ul id="nav-items">
+                <li><a href="#" id="nav-search-btn"><i class="bi bi-search"></i> Search</a></li>
+                <li>
+                    <a href="#" id="nav-favorites-btn"><i class="bi bi-bag-heart"></i> Favorites (<span id="favorites-count">0</span>)</a>
+                    <ul class="favorites-dropdown" id="favorites-dropdown" style="display: none;">
+                        <!-- Favorites will be populated here dynamically -->
+                    </ul>
+                </li>
+                <li><a href="#" id="nav-add-recipe-btn"><i class="bi bi-file-plus color-icons"></i> Add New</a></li>
+                <li><a href="#" id="nav-cart-btn"><i class="bi bi-cart"></i> Cart</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+<!--     
+    <div class="favorites-modal" style="display:block;">
+        <div class="favorites-modal-content">
+            <h2>Your Favorites</h2>
+            <!-- Favorite items will be rendered here -->
+             
+        </div>
+        <button onclick="favoritesModal.style.display='none'">Close</button>
+    </div>
+     -->
+    <div class="container">
+        <aside class="sidebar">
+            <!-- <h4>Category</h4> -->
+            <ul>
+                <li>
+                    <span class="checkbox-container">
+                        <input type="checkbox" id="dish1" name="dish1" value="Biryani">
+                    </span>
+                    <a href="#">Biryani</a>
+                </li>
+                <li>
+                    <span class="checkbox-container">
+                        <input type="checkbox" id="dish2" name="dish2" value="Paneer Tikka">
+                    </span>
+                    <a href="#">Paneer Tikka</a>
+                </li>
+                <li>
+                    <span class="checkbox-container">
+                        <input type="checkbox" id="dish3" name="dish3" value="Butter Chicken">
+                    </span>
+                    <a href="#">Butter Chicken</a>
+                </li>
+                <li>
+                    <span class="checkbox-container">
+                        <input type="checkbox" id="dish4" name="dish4" value="Samosa">
+                    </span>
+                    <a href="#">Samosa</a>
+                </li>
+                <li>
+                    <span class="checkbox-container">
+                        <input type="checkbox" id="dish5" name="dish5" value="Palak Paneer">
+                    </span>
+                    <a href="#">Palak Paneer</a>
+                </li>
+                <li>
+                    <span class="checkbox-container">
+                        <input type="checkbox" id="dish6" name="dish6" value="Chole Bhature">
+                    </span>
+                    <a href="#">Chole Bhature</a>
+                </li>
+                <li>
+                    <span class="checkbox-container">
+                        <input type="checkbox" id="dish7" name="dish7" value="Dosa">
+                    </span>
+                    <a href="#">Dosa</a>
+                </li>
+                <li>
+                    <span class="checkbox-container">
+                        <input type="checkbox" id="dish8" name="dish8" value="Tandoori Chicken">
+                    </span>
+                    <a href="#">Tandoori Chicken</a>
+                </li>
+                <li>
+                    <span class="checkbox-container">
+                        <input type="checkbox" id="dish9" name="dish9" value="Aloo Gobi">
+                    </span>
+                    <a href="#">Aloo Gobi</a>
+                </li>
+                <li>
+                    <span class="checkbox-container">
+                        <input type="checkbox" id="dish10" name="dish10" value="Gulab Jamun">
+                    </span>
+                    <a href="#">Gulab Jamun</a>
+                </li>
+            </ul>
+        </aside>
+
+
+        <div class="content">
+            <header class="content-head">
+                <div class="search-container hidden">
+                    <div class="search-input">
+                        <input type="search" id="search-content-item" placeholder="Serach for restaurants and food" />
+                    </div>
+                    <div class="search-icon">
+                        <i class="bi bi-search"></i>
+                    </div>
+                </div>
+                <div class="content-head-geet">
+                    <h3>What's on your mind?</h3>
+                </div>
+                <div class="dishes-icons">
+                    <a href="#">
+                        <div class="dishes-head-images">
+                            <img src="../Images/hamburger1.png" alt="not found" />
+                            <p>Hamburger</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="dishes-head-images">
+                            <img src="../Images/Omelette-removebg-preview.png" alt="not found" />
+                            <p>Anda</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="dishes-head-images">
+                            <img src="../Images/Samosa-removebg-preview.png" alt="not found" />
+                            <p>Samosa</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="dishes-head-images">
+                            <img src="../Images/vecteezy_indian-chicken-curry-with-rice-in-a-clay-pot-on-a-dark_23186688-removebg-preview.png"
+                                alt="not found" />
+                            <p>Chicken</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="dishes-head-images">
+                            <img src="../Images/Beer1.png"
+                                alt="not found" />
+                            <p>Drink</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="dishes-head-images">
+                            <img src="../Images/Tea2.png" alt="not found" />
+                            <p>Tea</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="dishes-head-images">
+                            <img src="../Images/Coffee.png" alt="not found" />
+                            <p>Coffee</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="dishes-head-images">
+                            <img src="../Images/Dosa1.png" alt="not found" />
+                            <p>Dosa</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="dishes-head-images">
+                            <img src="../Images/Fruits.png" alt="not found" />
+                            <p>Fruits</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="dishes-head-images">
+                            <img src="../Images/Dry-fruits.png" alt="not found" />
+                            <p>Dry Fruits</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="dishes-head-images">
+                            <img src="../Images/Salad.png" alt="not found" />
+                            <p>Salad</p>
+                        </div>
+                    </a>
+                </div>
+            </header>
+            <section class="recipe-Modal" id="recipeModal">
+
+                <div class="recipe-modal-content">
+                    <h2>Add New Recipe</h2>
+                    <p id="error-add-item"></p>
+                    <form>
+                        <label for="recipeName">Recipe Name:</label>
+                        <input type="text" id="recipeName" name="recipeName" required>
+
+                        <label for="recipeName">Image URL:</label>
+                        <input type="text" id="imageURL" name="imageURL" required>
+
+                        <label for="recipeName">Price:</label>
+                        <input type="text" id="time" name="time" required>
+
+                        <label for="recipeName">Rating:</label>
+                        <input type="text" id="rating" name="rating" required>
+
+                        <label for="recipeName">Ingredients:</label>
+                        <textarea id="ingredients" name="ingredients" required></textarea>
+
+
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+
+            </section>
+            <section class="cards-container">
+                <!-- <div class="item-card">
+                    <div class="card-header">
+                        <img src="https://thumbs.dreamstime.com/b/generative-ai-fruits-vegetables-arranged-heart-shape-healthy-food-nutrition-concept-isolated-business-generative-ai-315051475.jpg"
+                            alt="not found" />
+                        <button>Add+</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="body-header dflex">
+                            <h3>Meghna</h3>
+                            <span><i class="bi bi-heart fav-icon"></i></span>
+                        </div>
+
+                        <div class="body-content ">
+                            <div class="dflex">
+                                <h4>4.6 ⭐</h4>
+                                <p>$400 for two</p>
+                            </div>
+                            <div class="item-discription">
+                                <p>Bar Food, Chinese, North Indian
+                                    Indiranagar, Bangalore </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div> -->
+            </section>
+        </div>
+    </div>
+
+    <script src="../JS/home.js" type="module"></script>
+</body>
+
+</html>
